@@ -171,7 +171,7 @@
 
 						if (email){
 							$.ajax({
-								url:'http://api.sevilladevelopers.com/join',
+								url:'http://api.sevilla-developers.com/join',
 								type: 'POST',
 								dataType: 'json',
 								data:{
