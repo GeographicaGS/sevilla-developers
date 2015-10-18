@@ -1,0 +1,20 @@
+backend:
+  extends:
+    file: docker-password.yml
+    service: backend
+  build: backend/.
+  dockerfile: docker/Dockerfile
+
+  # Development configuration
+  command: nodemon -L bin/www
+  volumes:     
+    - ./backend/src/sevilla-developers:/app
+  ports:
+    - "3000:3000"
+
+frontend:
+  image: httpd
+  volumes:     
+    - ./frontend/www:/usr/local/apache2/htdocs/
+  ports:
+    - "80:80"

@@ -1,0 +1,7 @@
+backend:
+  extends:
+    file: docker-password.yml
+    service: backend
+  build: backend/.
+  dockerfile: docker/Dockerfile
+  restart: always
