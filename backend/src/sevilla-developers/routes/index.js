@@ -20,8 +20,6 @@ router.post('/join',function(req,res,next){
   if (email)
     email = email.trim();
 
-  console.log("Alberto");
-  console.log(email);
   if (!email || !validateEmail(email)){
 
     setTimeout(function(){
